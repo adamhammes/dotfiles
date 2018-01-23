@@ -1,0 +1,16 @@
+" Use Vim settings, rather than Vi settings
+" Must be first!
+set nocompatible
+
+" Make backspace behave in a sane manner
+set backspace=indent,eol,start
+
+" Turn on syntax highlighting
+syntax on
+
+" Enable file type detection and do language-dependent indenting
+filetype plugin indent on
+
+" Show line numbers
+set nu
+

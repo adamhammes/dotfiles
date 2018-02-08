@@ -14,3 +14,13 @@ filetype plugin indent on
 " Show line numbers
 set nu
 
+"" Vim-Plug
+"
+" Specify directory for plugins
+call plug#begin('~/.vim/plugged')
+
+" Typescript syntax highlighting
+Plug 'leafgarland/typescript-vim'
+
+" Initialize plugin system
+call plug#end()

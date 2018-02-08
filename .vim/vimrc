@@ -22,5 +22,9 @@ call plug#begin('~/.vim/plugged')
 " Typescript syntax highlighting
 Plug 'leafgarland/typescript-vim'
 
+" Typescript IDE
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Quramy/tsuquyomi'
+
 " Initialize plugin system
 call plug#end()

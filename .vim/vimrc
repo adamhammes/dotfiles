@@ -2,22 +2,22 @@
 " Must be first!
 set nocompatible
 
+" Enable file type detection and do language-dependent indenting
+filetype plugin indent on
+
 " Make backspace behave in a sane manner
 set backspace=indent,eol,start
 
 " Turn on syntax highlighting
 syntax on
 
-" Enable file type detection and do language-dependent indenting
-filetype plugin indent on
-
-" Show line numbers
-set nu
-
-"" Vim-Plug
+""" Vim-Plug
 "
 " Specify directory for plugins
 call plug#begin('~/.vim/plugged')
+
+" Syntastic
+Plug 'vim-syntastic/syntastic'
 
 " Typescript syntax highlighting
 Plug 'leafgarland/typescript-vim'
@@ -28,3 +28,17 @@ Plug 'Quramy/tsuquyomi'
 
 " Initialize plugin system
 call plug#end()
+
+""" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+""" Tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+

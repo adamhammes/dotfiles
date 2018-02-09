@@ -11,6 +11,9 @@ set backspace=indent,eol,start
 " Turn on syntax highlighting
 syntax on
 
+" Turn on line numbers
+set nu
+
 """ Vim-Plug
 "
 " Specify directory for plugins

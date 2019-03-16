@@ -29,6 +29,10 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Quramy/tsuquyomi'
 
+" Python stuff
+Plug 'ambv/black'
+
+
 " Initialize plugin system
 call plug#end()
 

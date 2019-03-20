@@ -8,6 +8,11 @@ set backspace=indent,eol,start
 " Turn on syntax highlighting
 syntax on
 
+" Show whitespace characters
+set list
+set listchars=tab:→\ ,space:·
+highlight SpecialKey ctermfg=grey guifg=grey70
+
 " Enable file type detection and do language-dependent indenting
 filetype plugin indent on
 

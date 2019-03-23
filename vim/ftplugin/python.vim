@@ -3,3 +3,5 @@
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%80v', 100)
 
+nnoremap <Leader>r :exec ':w \| !clear; python' shellescape(@%, 1)<cr>
+

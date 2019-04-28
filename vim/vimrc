@@ -29,6 +29,9 @@ set nu
 " Specify directory for plugins
 call plug#begin('~/.vim/plugged')
 
+" Plugin for automatically setting indentation settings
+Plug 'tpope/vim-sleuth'
+
 " Syntastic
 Plug 'vim-syntastic/syntastic'
 

@@ -1,2 +1,5 @@
 # The black vim plugin installs itself in this repo
 vim/black/
+
+*.log
+.netrwhist

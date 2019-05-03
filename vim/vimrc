@@ -18,6 +18,12 @@ set list
 set listchars=tab:→\ ,space:·
 highlight SpecialKey ctermfg=grey guifg=grey70
 
+" Show incremental searches
+set incsearch
+
+" Highlight all search matches
+set hlsearch
+
 " Enable file type detection and do language-dependent indenting
 filetype plugin indent on
 

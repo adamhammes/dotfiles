@@ -28,7 +28,12 @@ set hlsearch
 filetype plugin indent on
 
 " Show line numbers
-set nu
+set number
+set relativenumber
+
+" Source vimrc with leader cl (config load)
+nnoremap <leader>co :edit $MYVIMRC<cr>
+nnoremap <leader>cl :source $MYVIMRC<cr>
 
 """ Vim-Plug
 "
@@ -38,29 +43,21 @@ call plug#begin('~/.vim/plugged')
 " Plugin for automatically setting indentation settings
 Plug 'tpope/vim-sleuth'
 
+" File opener
+Plug 'kien/ctrlp.vim'
+
+" Exclude gitignored files from ctrlp
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" Bind ctrlp to leader P
+nnoremap <leader>p  :CtrlP .<cr>
+
 " Syntastic
 Plug 'vim-syntastic/syntastic'
 
 " Typescript syntax highlighting
 Plug 'leafgarland/typescript-vim'
 
-" Typescript IDE
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Quramy/tsuquyomi'
-
 " Initialize plugin system
 call plug#end()
-
-""" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-""" Tsuquyomi
-let g:tsuquyomi_disable_quickfix = 1
 

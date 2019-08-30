@@ -1,0 +1,13 @@
+set relativenumber
+
+" Show incremental searches
+set incsearch
+
+" Highlight all search matches
+set hlsearch
+
+let mapleader = " "
+
+nmap <leader>p :action GotoFile<cr>
+nmap <leader>q :action Run<cr>
+

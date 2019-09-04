@@ -37,6 +37,8 @@ nnoremap <leader>cl :source $MYVIMRC<cr>
 
 """ Vim-Plug
 "
+" Run :PlugInstall to install the plugins
+"
 " Specify directory for plugins
 call plug#begin('~/.vim/plugged')
 
@@ -55,6 +57,8 @@ let g:prettier#config#parser = 'babylon'
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+Plug 'christoomey/vim-tmux-navigator'
 
 " Plugin for automatically setting indentation settings
 Plug 'tpope/vim-sleuth'
